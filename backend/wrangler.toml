@@ -1,0 +1,31 @@
+name = "blogora"
+main = "src/index.ts"
+compatibility_date = "2025-05-22"
+
+
+# compatibility_flags = ["nodejs_compat"]
+
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKVldHRUhFNldTNk43NVFRTVRBNktLNUMiLCJ0ZW5hbnRfaWQiOiIzNzI3ZmU5ZWQ3NWZiYzg0ODYxOTY1MDZkOGI5YWQ0ZDkzMzRkOTQyZTYyNDdkNzM3YTdjNDQ4OTg3OTc1ZmMzIiwiaW50ZXJuYWxfc2VjcmV0IjoiMzg2Njk1M2EtNmU1MC00YWQzLTk3ZGQtOWI1OTBlZTc5YzEyIn0.h1esNXP3Ezf3QYRbgUMCRVRznqlq76gAMAl6HktgGZM"
+
+JWT_SECRET = "bhavyasecret"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "MY_DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
