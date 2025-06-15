@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://flownote.anejamayank16.workers.dev"

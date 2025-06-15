@@ -1,19 +1,38 @@
-import { Appbar } from "../components/AppBar"
+import { Appbar } from "../components/Appbar"
 import { BlogCard } from "../components/BlogCard"
+import { BlogSkeleton } from "../components/BlogSkeleton"
+import {useBlogs} from "../hooks"
 
 export const Blogs = () => {
-    return (
-        <div>
+    const {loading,blogs}=useBlogs()
+
+    if(loading){
+        return <div className="flex justify-center">
+            <div>
             <Appbar />
-            <BlogCard 
-                authorName="John Doe"
-                title="Understanding React Hooks"
-                content="React Hooks are functions that let you use state and other React features without writing a class. They were introduced in React 16.8 and have since become a fundamental part of React development. Hooks allow you to manage state, side effects, context, and more in functional components, making your code cleaner and more reusable."
-                publishedDate="2023-10-01"
-                id={1}
-            />
-            
+            <div>
+            <BlogSkeleton />
+           <BlogSkeleton />
+           <BlogSkeleton />
+           <BlogSkeleton />
+           <BlogSkeleton />
+            </div>
            
         </div>
-    )
+        </div>
+    }
+    return <div>
+        <Appbar />
+    <div className="flex justify-center">
+        <div>
+            
+            {blogs.map(blog=> <BlogCard id={blog.id} authorName={blog.author.name || "Anonymous"} title={blog.title} content={blog.content} publishedDate={"2nd Feb,2025"}
+            />)}
+
+           
+            
+        </div>
+    </div>
+    </div>
 }
+
